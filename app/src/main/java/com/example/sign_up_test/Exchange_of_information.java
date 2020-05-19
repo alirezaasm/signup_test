@@ -10,21 +10,26 @@ import java.util.Map;
 
 public class Exchange_of_information {
     String url="";
-    HashMap<String, String> data;
-    String feedback="";
+    HashMap<String, String> data=new HashMap<>();
+    String feedback=null;
     public Exchange_of_information(HashMap<String, String> data, String url) {
         this.data = data;
         this.url=url;
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public void Send_information()
+
+
+
+    public String Send_information()
     {
-        MyHttpUtils.RequestData requestData =
+        final MyHttpUtils.RequestData requestData =
                 new MyHttpUtils.RequestData(url, "POST");
+
+
         for (Map.Entry<String, String> entry : data.entrySet()) {
             requestData.setParameter(entry.getKey(),entry.getValue());
         }
         new MyTask().execute(requestData);
+        return feedback;
 
     }
 

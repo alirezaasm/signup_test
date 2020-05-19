@@ -16,6 +16,9 @@ import java.util.Map;
 
 public class MyHttpUtils {
 
+    String g="";
+
+
     public static String inputStreamToString(InputStream stream) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         StringBuilder sb = new StringBuilder();
@@ -31,6 +34,7 @@ public class MyHttpUtils {
         }
         return null;
     }
+
 
 
     public static String getDataHttpUrlConnection(RequestData requestData){
@@ -149,4 +153,7 @@ public class MyHttpUtils {
         }
 
     }
+
+
+
 }
