@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Exchange_of_information exchange_of_information=new Exchange_of_information(Info_for_signup,"");
         exchange_of_information.Send_information();
+        tv=findViewById(R.id.textView);
 
         tv.setText(exchange_of_information.feedback);
 
