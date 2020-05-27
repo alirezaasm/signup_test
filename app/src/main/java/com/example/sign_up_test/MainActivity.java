@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     HashMap<String,String> Info_for_signup=new HashMap<>();
-    String url="http://tabbesh.ir:83/signup//";
+    String url="http://tabbesh.ir:83/signup/";
     ProgressBar pb;
     EditText fn, ln;
     String feedback=null;
@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fn=findViewById(R.id.user);
-        ln=findViewById(R.id.password);
+
 
         pb=findViewById(R.id.progressBar);
         pb.setVisibility(View.INVISIBLE);
@@ -92,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 final MyHttpUtils.RequestData requestData =
                         new MyHttpUtils.RequestData(url, "POST");
 
-                Info_for_signup.put("first_name",fn.getText().toString().trim());
-                Info_for_signup.put("last_name",ln.getText().toString().trim());
+                Info_for_signup.put("first_name","bardia");
+                Info_for_signup.put("last_name","dori");
                 Info_for_signup.put("username","admin3211264");
                 Info_for_signup.put("phone_number","4343443433");
                 Info_for_signup.put("grades[0]","1");
                 Info_for_signup.put("gender","True");
 
 
-                //add here 
+                //add here
 
                 for (Map.Entry<String, String> entry : Info_for_signup.entrySet()) {
                     requestData.setParameter(entry.getKey(),entry.getValue());

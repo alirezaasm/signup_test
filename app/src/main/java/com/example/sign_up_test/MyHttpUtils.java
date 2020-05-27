@@ -40,6 +40,7 @@ public class MyHttpUtils {
     public static String getDataHttpUrlConnection(RequestData requestData){
         String uri = requestData.getUri();
         if("GET".equals(requestData.getMethod()) && !requestData.getParams().isEmpty())
+
         {
             uri += "?" + requestData.getEncodedParams();
         }
