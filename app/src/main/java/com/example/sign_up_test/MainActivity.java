@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     HashMap<String,String> Info_for_signup=new HashMap<>();
-    String url="https://tabeshma.000webhostapp.com/mysites/showparams.php";
+    String url="http://tabbesh.ir:83/signup//";
     ProgressBar pb;
     EditText fn, ln;
     String feedback=null;
@@ -92,8 +92,13 @@ public class MainActivity extends AppCompatActivity {
                 final MyHttpUtils.RequestData requestData =
                         new MyHttpUtils.RequestData(url, "POST");
 
-                Info_for_signup.put("firstname",fn.getText().toString().trim());
-                Info_for_signup.put("lastname",ln.getText().toString().trim());
+                Info_for_signup.put("first_name",fn.getText().toString().trim());
+                Info_for_signup.put("last_name",ln.getText().toString().trim());
+                Info_for_signup.put("username","admin3211264");
+                Info_for_signup.put("phone_number","4343443433");
+                Info_for_signup.put("grades[0]","1");
+                Info_for_signup.put("gender","True");
+
 
                 //add here 
 
