@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 Info_for_signup.put("firstname",fn.getText().toString().trim());
                 Info_for_signup.put("lastname",ln.getText().toString().trim());
 
+                //add here 
+
                 for (Map.Entry<String, String> entry : Info_for_signup.entrySet()) {
                     requestData.setParameter(entry.getKey(),entry.getValue());
                 }
